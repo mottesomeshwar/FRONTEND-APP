@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 function Register() {
-    return (
-        <div>
-            <h1>Register Page</h1>
-            <form>
-                <input type="text" placeholder="Username" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Registration Page</h2>
+      <p><input type="text" placeholder="Name" /></p>
+      <p><input type="text" placeholder="Email" /></p>
+      <p><input type="password" placeholder="Password" /></p>
+      <p><button>Submit</button></p>
+      <p>
+        <Link to="/login">Already a member? Login here</Link>
+      </p>
+    </div>
+  );
 }
-
 export default Register;
