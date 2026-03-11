@@ -1,57 +1,19 @@
-.App-Header {
-  background: linear-gradient(90deg, #ff7a18, #ffb347);
-  display: flex;
+.App-Header{
+  display : flex;
   justify-content: space-between;
+  background-color: rgb(172, 216, 216);
+  color : rgb(86, 105, 128);
+  text-align: center;
+  padding-left: 20px;
   align-items: center;
-  padding: 15px 40px;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin : 0px;
 }
-
-/* Logo / Title */
-.App-Header h1 {
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* Navigation */
-.App-Header ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Menu Items */
 .App-Header li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-/* Links */
-.App-Header a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-.App-Header a:hover {
-  background-color: white;
-  color: #ff7a18;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .App-Header {
-    flex-direction: column;
+    display : inline-block;
+    color: rgb(86, 105, 128);
+    padding: 14px 16px;
     text-align: center;
-  }
-
-  .App-Header li {
-    display: block;
-    margin: 10px 0;
-  }
-}
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+}   

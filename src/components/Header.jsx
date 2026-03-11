@@ -1,16 +1,18 @@
 import "./Header.css"
-function Header() {
-  return (
+function Header(){
+    return (
     <div className="App-Header">
-      <h1>My Application</h1>
-      <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Users</li>
-        <li>Login</li>
-        <li>Logout</li>
-      </ul>
+      <h1>Header</h1>
+      <nav>
+        <ul>
+            <li>Home</li>
+            <li>Carts</li>
+            <li>Orders</li>
+            <li>login</li>
+            <li>logout</li>
+        </ul>
+      </nav>
     </div>
-  );
+    )
 }
 export default Header;

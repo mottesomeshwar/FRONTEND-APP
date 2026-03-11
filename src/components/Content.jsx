@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import "./Content.css";
 import axios from "axios";
-import "./Content.css"
+const API_URL = import.meta.env.VITE_API_URL;
 function Content() {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
   const [products, setProducts] = useState([]);
   const increment = () => {
     setCount(count + 1);
@@ -11,7 +12,7 @@ function Content() {
     setCount(count - 1);
   };
   const fetchProducts = async () => {
-    const url = "https://backend-app-etaz.onrender.com/store";
+    const url = `${API_URL}/store`;
     const res = await axios.get(url);
     setProducts(res.data);
   };
@@ -20,21 +21,23 @@ function Content() {
   }, []);
   return (
     <div>
-     
-      {/* <button onClick={decrement}>-</button>
+      <h3>Products Page</h3>
+      <button onClick={decrement}>-</button>
       {count}
       <button onClick={increment}>+</button>
-      <hr /> */}
-      <div className="row">
+      <hr />
+      
         {products.map((product) => (
-          <div className="box">
-            <img src={`https://backend-app-etaz.onrender.com/${product.imageUrl}`} width="300px" alt="" />
-            <h3>{product.name}</h3>
-            <p>{product.desc}</p>
-            <h4>{product.price}</h4>
+          <div className="products">
+            <ul>
+              <img src={`${API_URL}/${product.image}`} alt={product.name} />
+              <li>Product : {product.name}</li>
+              <li>Price : {product.price}</li>
+              <li>Description : {product.desc}</li>
+              <button>Add to Cart</button>
+            </ul>
           </div>
         ))}
-      </div>
     </div>
   );
 }
