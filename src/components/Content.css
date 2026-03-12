@@ -1,20 +1,19 @@
 .products{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap;      /* moves to next row if space is full */
+    gap: 20px;            /* space between products */
     margin: 20px;
 }
 
-/* Each product box */
+/* Each product card */
 .product{
-    border: 2px solid #444;      /* line around each product */
-    border-radius: 8px;
+    border: 2px solid #444; 
     padding: 15px;
-    width: 300px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    width: 250px;         /* fixed width so they stay side by side */
+    text-align: center;
     background-color: rgb(172, 216, 216);
     color: rgb(86, 105, 128);
-    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 /* Product image */
@@ -22,6 +21,4 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid #444;  /* line under image */
-    margin-bottom: 10px;
 }
